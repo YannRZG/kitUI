@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="log">
+        <div class="form-container">
+            <p class="title">Créer un nouvel événement</p>
+            <form action="<%= events_path %>" method="post" class="form">
+                <input type="hidden" name="event[admin_id]" value="<%= current_user.id %>">
+                <input type="text" class="input" name="event[title]" placeholder="Titre">
+                <input type="time" class="input" name="event[start_date]" placeholder="Date de début">
+                <input type="number" class="input" name="event[duration]" placeholder="Durée (en minutes)">
+                <textarea class="input" name="event[description]" placeholder="Description"></textarea>
+                <input type="text" class="input" name="event[location]" placeholder="Lieu">
+                <input type="number" class="input" name="event[price]" placeholder="Prix">
+                <button class="form-btn" type="submit">Créer l'événement</button>
+            </form>
+           
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
